@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav class="mention">
+        <h1>Input Data</h1>
+        <nav class="box">
+
+            <nav class="max-group">
+                <label for="" class="font"> ឈ្មោះអ្នកប្រើប្រាស់</label>
+
+                <input type="text" class="chack" >
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> ភេទ</label>
+
+                <input type="text" class="chack" >
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font">​អាយុ</label>
+
+                <input type="text" class="chack" >
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> គីឡូភ្លើងចាស់</label>
+
+                <input type="text" class="chack" id="form">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font"> គីឡូភ្លើងថ្មី</label>
+
+                <input type="text" class="chack" id="form1">
+
+            </nav>
+          
+            <input type="button" class="find" value="លទ្ធផល" onclick="calAdd()" />
+
+            <nav class="max-group">
+                <label for="" class="font1"> អ្នកប្រើប្រាស់អស់</label>
+
+                <input type="text" class="chack1" id="formx">
+
+            </nav>
+            <nav class="max-group">
+                <label for="" class="font1"> ចំនួនទឺកប្រាក់</label>
+                <input type="text" class="chack1" id="formx1">
+            </nav>
+        </nav>
+    </nav>
+
+
+
+    <script>
+        function calAdd() {
+            var a, b, Use;
+
+            a = parseFloat(document.getElementById("form").value);
+            b = parseFloat(document.getElementById("form1").value);
+            Use=b-a;
+        document.getElementById("formx").value=Use;
+         
+
+        if(Use<50){
+            document.getElementById("formx1").value=Use*350+"R";
+            
+            }
+        else if(Use>=50 && Use<100){
+            document.getElementById("formx1").value=Use*400 +"R";
+        }
+        else if(Use<=100 && Use<150){
+            document.getElementById("formx1").value=Use*500 +"R";
+        }
+        else if(Use>=150 && Use<200){
+            document.getElementById("formx1").value=Use*600 +"R";
+        }
+        else{
+            document.getElementById("formx1").value=Use*800 +"R";
+        }
+       
+
+        }
+
+    </script>
+
+
+  
+    
+</body>
+</html>
